@@ -6,7 +6,6 @@ import he from 'he';
 import flatpickr from 'flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
 
-// const date = new Date();
 
 const BLANK_TRIPPOINT = {
   basePrice: 999,
@@ -17,7 +16,6 @@ const BLANK_TRIPPOINT = {
   offersIDs: [],
   type: pointTypes[Math.floor(Math.random() * pointTypes.length)]
 };
-
 
 const createDestinationPicsTemplate = (destination) => (destination.pictures
   .map((pic) => `
