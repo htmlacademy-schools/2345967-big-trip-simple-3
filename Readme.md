@@ -1,6 +1,6 @@
 # Проект «Большое путешествие (простой)»
 
-* Студент: [Никита Егоров](https://up.htmlacademy.ru/univer-js2/3/user/2345967).
+* Студент: [Егоров Никита](https://up.htmlacademy.ru/univer-js2/3/user/2345967).
 * Наставник: Глеб Клецков.
 
 ---
@@ -48,5 +48,5 @@ git clone SSH-адрес_вашего_форка
 
 Репозиторий создан для обучения на профессиональном курсе «[JavaScript. Архитектура клиентских приложений](https://htmlacademy.ru/intensive/ecmascript)» от [HTML Academy](https://htmlacademy.ru).
 
-[check-image]: https://github.com/htmlacademy-ecmascript/2345967-big-trip-simple-3/workflows/Project%20check/badge.svg?branch=master
-[check-url]: https://github.com/htmlacademy-ecmascript/2345967-big-trip-simple-3/actions
+[check-image]: https://github.com/htmlacademy-ecmascript/2345805-big-trip-simple-3/workflows/Project%20check/badge.svg?branch=master
+[check-url]: https://github.com/htmlacademy-ecmascript/2345805-big-trip-simple-3/actions
