@@ -9,8 +9,8 @@ import 'flatpickr/dist/flatpickr.min.css';
 
 const BLANK_TRIPPOINT = {
   basePrice: 999,
-  dateFrom: (new Date()).toISOString(), // '2019-07-18T20:20:13.375Z',
-  dateTo: (new Date((new Date()).getTime() + 3600000)).toISOString(), //'2019-07-18T21:40:13.375Z',
+  dateFrom: (new Date()).toISOString(),
+  dateTo: (new Date((new Date()).getTime() + 3600000)).toISOString(),
   destination: undefined,
   id: 0,
   offersIDs: [],
