@@ -47,7 +47,6 @@ const filterPresenter = new FilterPresenter({
   tripPointsModel
 });
 
-
 function handleNewTripPointButtonClick() {
   boardPresenter.createTripPoint();
   newTripPointButtonComponent.element.disabled = true;
