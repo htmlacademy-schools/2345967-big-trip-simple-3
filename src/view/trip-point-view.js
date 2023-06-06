@@ -18,7 +18,7 @@ const createOffersTemplate = (offers, offersIDs, type) => {
 
 const createTripPointTemplate = (tripPoint, destinations, offers) => {
   const destination = getItemFromItemsById(destinations, tripPoint.destination);
-  console.log(tripPoint, destination, offers);
+
   return (`
     <li class="trip-events__item">
     <div class="event">
