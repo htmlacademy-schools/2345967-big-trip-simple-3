@@ -19,8 +19,10 @@ export default class TripPointApiService extends ApiService {
   }
 
   get offers() {
-    return this._load({url: 'offers'})
+    const resp = this._load({url: 'offers'})
       .then(ApiService.parseResponse);
+    console.log(resp);
+    return resp;
   }
 
   async updateTripPoint(tripPoint) {

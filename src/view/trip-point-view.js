@@ -6,7 +6,11 @@ import he from 'he';
 
 
 const createOffersTemplate = (offers, offersIDs, type) => {
-  const currentTypeOffers = offers.find((el) => el.type === type).offers;
+  const currentTypes = offers.find((el) => el.type === type);
+  let currentTypeOffers = [];
+  if (currentTypes) {
+    currentTypeOffers = currentTypes.offers;
+  }
   return currentTypeOffers.filter((el) => offersIDs.includes(el.id)).map((offer) => `
     <li class="event__offer">
       <span class="event__offer-title">${offer.title}</span>
