@@ -49,7 +49,11 @@ const createOffersTemplate = (currentTypeOffers, checkedOffers, id, isDisabled) 
 );
 
 const createEventDetailsTemplate = (tripPoint, destination, offers, isDisabled) => {
-  const currentTypeOffers = offers.find((el) => el.type === tripPoint.type).offers;
+  const currentTypes = offers.find((el) => el.type === tripPoint.type);
+  let currentTypeOffers = [];
+  if (currentTypes) {
+    currentTypeOffers = currentTypes.offers;
+  }
   return `
   <section class="event__section  event__section--offers ${(currentTypeOffers.length === 0) ? 'visually-hidden' : ''}" >
     <h3 class="event__section-title  event__section-title--offers">Offers</h3>
@@ -326,8 +330,13 @@ export default class EditFormView extends AbstractStatefulView {
   };
 
   static parseTripPointToState(tripPoint, offers) {
+    const currentTypes = offers.find((el) => el.type === tripPoint.type);
+    let currentTypeOffers = [];
+    if (currentTypes) {
+      currentTypeOffers = currentTypes.offers;
+    }
     return {...tripPoint,
-      currentTypeOffers: offers.find((el) => el.type === tripPoint.type).offers,
+      currentTypeOffers,
       isDisabled: false,
       isSaving: false,
       isDeleting: false,

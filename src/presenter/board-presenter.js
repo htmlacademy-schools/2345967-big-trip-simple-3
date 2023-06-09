@@ -73,8 +73,8 @@ export default class BoardPresenter {
     return this.#offersModel.offers;
   }
 
-  init() {
-    this.#renderBoard();
+  async init() {
+    await this.#renderBoard();
   }
 
   createTripPoint() {
@@ -214,13 +214,13 @@ export default class BoardPresenter {
     }
   }
 
-  #renderBoard() {
+  async #renderBoard() {
 
     if(this.#isLoading) {
       this.#renderLoading();
       return;
     }
-    const tripPoints = this.tripPoints;
+    const tripPoints = await this.tripPoints;
 
     if (tripPoints.length === 0) {
       this.#renderNoTripPoints();
