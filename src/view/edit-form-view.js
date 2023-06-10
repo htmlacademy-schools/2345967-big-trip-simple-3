@@ -332,9 +332,9 @@ export default class EditFormView extends AbstractStatefulView {
   static parseTripPointToState(tripPoint, offers) {
     const currentTypes = offers.find((el) => el.type === tripPoint.type);
     let currentTypeOffers = [];
-    if (currentTypes) {
+    try {
       currentTypeOffers = currentTypes.offers;
-    }
+    } catch (err) { location.reload(); }
     return {...tripPoint,
       currentTypeOffers,
       isDisabled: false,
