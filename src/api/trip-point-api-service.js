@@ -21,7 +21,6 @@ export default class TripPointApiService extends ApiService {
   get offers() {
     const resp = this._load({url: 'offers'})
       .then(ApiService.parseResponse);
-    console.log(resp);
     return resp;
   }
 

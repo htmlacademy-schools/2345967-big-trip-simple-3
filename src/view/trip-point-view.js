@@ -20,7 +20,7 @@ const createOffersTemplate = (offers, offersIDs, type) => {
   ).join('');
 };
 
-const createTripPointTemplate = (tripPoint, destinations, offers) => {
+function createTripPointTemplate(tripPoint, destinations, offers) {
   const destination = getItemFromItemsById(destinations, tripPoint.destination);
 
   return (`
@@ -51,7 +51,7 @@ const createTripPointTemplate = (tripPoint, destinations, offers) => {
     </div>
   </li>`
   );
-};
+}
 
 export default class TripPointView extends AbstractView {
   #tripPoint = null;
@@ -70,7 +70,12 @@ export default class TripPointView extends AbstractView {
   }
 
   get template() {
-    return createTripPointTemplate(this.#tripPoint, this.#destinations, this.#offers);
+    let template = '';
+    try {
+      template = createTripPointTemplate(this.#tripPoint, this.#destinations, this.#offers);
+    }
+    catch(err) { location.reload(); }
+    return template;
   }
 
   #editClickHandler = (evt) => {

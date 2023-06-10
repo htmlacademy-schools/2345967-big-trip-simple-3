@@ -11,7 +11,7 @@ import NewTripPointButtonView from './view/new-trip-point-button-view.js';
 
 import TripPointApiService from './api/trip-point-api-service.js';
 
-const AUTHORIZATION = 'Basic 0'; //${crypto.randomUUID().slice(0, 8)}`;
+const AUTHORIZATION = 'Basic 0';
 
 const END_POINT = 'https://18.ecmascript.pages.academy/big-trip';
 
